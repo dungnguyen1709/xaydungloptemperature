@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   function Temperature(doC) {
+       this.doC = doC;
+       this.getDoC = function () {
+          return this.doC;
+       };
+       this.setDoC = function (doC) {
+           this.doC = doC;
+       };
+       this.swapCF = function (doC) {
+           if (doC > -273) {
+               console.log(doC + " chuyển đổi sang độ F là: " +(doC * 1.8 + 32));
+               console.log(doC + " chuyển đổi sang độ K là: "+ (doC + 273.15));
+           } else {
+               alert("nhập lại");
+           }
+       };
+   }
+   let myTemperature = new Temperature(25);
+   let doC = myTemperature.getDoC();
+   console.log(doC + " chuyển đổi sang độ F là: " +(doC * 1.8 + 32));
+   console.log(doC + " chuyển đổi sang độ K là: "+ (doC + 275.13));
+</script>
+</body>
+</html>
